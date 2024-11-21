@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "97502992300",
+    "project_id": "mobilecheck-84c52",
+    "storage_bucket": "mobilecheck-84c52.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97502992300:android:f20ae2469b5009aeef8c09",
+        "android_client_info": {
+          "package_name": "com.example.mobilecheck"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwM9c5NJcrNDsty114vGzrKAFJcUXAeQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
