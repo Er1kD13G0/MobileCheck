@@ -9,6 +9,18 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/button_produtos"
+        android:layout_width="108dp"
+        android:layout_height="61dp"
+        android:backgroundTint="#424242"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <Button
         android:id="@+id/button_chatbot"
         android:layout_width="64dp"
         android:layout_height="72dp"
@@ -106,18 +118,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.351"
         app:srcCompat="@drawable/usuarios_1" />
-
-    <Button
-        android:id="@+id/button_produtos"
-        android:layout_width="108dp"
-        android:layout_height="61dp"
-        android:backgroundTint="#424242"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347" />
 
     <ImageView
         android:id="@+id/imageView8"

@@ -15,6 +15,19 @@
         android:theme="@style/Theme.MobileCheck"
         tools:targetApi="31">
         <activity
+            android:name=".ProductEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductActivityCad"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCheck" />
+        <activity
+            android:name=".ProdutoCadastroActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserActivity"
             android:exported="false" />
         <activity
@@ -31,7 +44,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -34,14 +34,6 @@
         app:layout_constraintVertical_bias="0.957"
         app:srcCompat="@drawable/icon_robo__1_" />
 
-    <WebView
-        android:id="@+id/web"
-        android:layout_width="45dp"
-        android:layout_height="23dp"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="363dp"
-        tools:layout_editor_absoluteY="606dp" />
-
     <TextView
         android:id="@+id/user_email_textview"
         android:layout_width="176dp"

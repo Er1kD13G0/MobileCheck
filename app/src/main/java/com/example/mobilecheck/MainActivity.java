@@ -2,9 +2,11 @@ package com.example.mobilecheck;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button ChatBotButton;
     private Button UsuariosButton;
+    private Button ProdutoButton;
     private WebView WebViewChat;
 
     @Override
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         // Inicializando o botão e a WebView
         ChatBotButton = findViewById(R.id.button_chatbot);
         UsuariosButton = findViewById(R.id.button_usuarios);
+        ProdutoButton = findViewById(R.id.button_produtos);
         WebViewChat = findViewById(R.id.web);     // Habilitando JavaScript no WebView
         WebSettings webSettings = WebViewChat.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -44,12 +48,18 @@ public class MainActivity extends AppCompatActivity {
             String cnpj = getIntent().getStringExtra("cnpj");
 
             // Passa os dados para a UserActivity
-            Intent intent = new Intent(MainActivity.this, UserActivity.class);
-            intent.putExtra("email", email);
-            intent.putExtra("usuario", usuario);
-            intent.putExtra("senha", senha);
-            intent.putExtra("cnpj", cnpj);
-            startActivity(intent);
+            Intent userIntent = new Intent(MainActivity.this, UserActivity.class);
+            userIntent.putExtra("email", email);
+            userIntent.putExtra("usuario", usuario);
+            userIntent.putExtra("senha", senha);
+            userIntent.putExtra("cnpj", cnpj);
+            startActivity(userIntent);
+        });
+
+        // Configuração do clique no botão Produto
+        ProdutoButton.setOnClickListener(v -> {
+            Intent produtosIntent = new Intent(MainActivity.this, ProductActivity.class);
+            startActivity(produtosIntent);
         });
     }
 }
