@@ -13,6 +13,7 @@
         android:layout_width="64dp"
         android:layout_height="72dp"
         android:backgroundTint="#424242"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.925"
@@ -24,6 +25,7 @@
         android:id="@+id/imageView17"
         android:layout_width="62dp"
         android:layout_height="64dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.928"
@@ -70,8 +72,8 @@
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="186dp"
-        android:layout_height="133dp"
+        android:layout_width="190dp"
+        android:layout_height="143dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.059"
@@ -245,12 +247,8 @@
         android:id="@+id/web"
         android:layout_width="45dp"
         android:layout_height="23dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.905"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.847" />
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="331dp"
+        tools:layout_editor_absoluteY="600dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

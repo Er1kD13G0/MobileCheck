@@ -9,12 +9,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -27,7 +23,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText loginUsuario, loginSenha, loginEmail, loginCnpj;
     private TextView cadastroRedirectText;
     private Button loginButton;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,15 +42,22 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = loginEmail.getText().toString();
                 String senha = loginSenha.getText().toString();
+                String usuario = loginUsuario.getText().toString();
+                String cnpj = loginCnpj.getText().toString();
 
-                if(!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    if(!senha.isEmpty()) {
+                if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    if (!senha.isEmpty()) {
                         auth.signInWithEmailAndPassword(email, senha)
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
-                                        Toast.makeText(LoginActivity.this, "Você foi logado com sucesso!", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                        // Passa para a MainActivity após login bem-sucedido
+                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                        intent.putExtra("email", email);
+                                        intent.putExtra("usuario", usuario);
+                                        intent.putExtra("senha", senha);
+                                        intent.putExtra("cnpj", cnpj);
+                                        startActivity(intent);
                                         finish();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
@@ -68,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
                         loginSenha.setError("A senha não pode estar vazia!");
                     }
-                } else if(email.isEmpty()) {
+                } else if (email.isEmpty()) {
                     loginEmail.setError("O email não pode estar vazio!");
                 } else {
                     loginEmail.setError("Por favor insira um email válido");
@@ -76,11 +78,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-                cadastroRedirectText.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
-                    }
-                });
+        cadastroRedirectText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+            }
+        });
     }
 }
