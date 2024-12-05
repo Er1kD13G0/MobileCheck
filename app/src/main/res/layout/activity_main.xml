@@ -8,6 +8,17 @@
     android:background="#C2C2C2"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="498dp"
+        android:layout_height="329dp"
+        android:layout_marginBottom="556dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/barra_superior__1_" />
+
     <Button
         android:id="@+id/button_produtos"
         android:layout_width="108dp"
@@ -178,17 +189,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.158"
         app:srcCompat="@drawable/caixa_aberta_1" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="422dp"
-        android:layout_height="131dp"
-        android:layout_marginBottom="652dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/barra_superior__1_" />
 
     <TextView
         android:id="@+id/textView2"
